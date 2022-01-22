@@ -1,0 +1,17 @@
+server:
+  port: 8088
+
+dubbo:
+  scan:
+    base-packages: com.edu
+  application:
+    id: assert-manager
+    name: assert-manager
+  protocol:
+    name: dubbo
+  registry:
+    address: zookeeper://192.168.64.129:2182
+  consumer:
+    init: true
+    check: false
+    filter: contextFilter

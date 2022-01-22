@@ -1,0 +1,2 @@
+contextFilter=com.edu.ele.filter.DubboServiceFilter
+customExceptionFilter=com.edu.api.exception.DubboExceptionFilter

@@ -1,0 +1,16 @@
+server:
+  port: 8089
+
+dubbo:
+  scan:
+    base-packages: com.edu
+  protocol:
+    name: dubbo
+    port: 20881
+  application:
+    id: system-manager
+    name: system-manager
+  registry:
+    address: zookeeper://192.168.64.129:2182
+  provider:
+    filter: customExceptionFilter
