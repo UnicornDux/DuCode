@@ -6,7 +6,8 @@
     <modules>
         <module>common-api</module>
         <module>system-server</module>
-        <module>assert-manager</module>
+        <module>asset-manager</module>
+        <module>dorpc-server</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -23,6 +24,8 @@
         <java.version>1.8</java.version>
         <dubbo.version>2.7.9</dubbo.version>
         <springboot.version>2.3.1.RELEASE</springboot.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
     <dependencyManagement>
@@ -78,6 +81,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
             <optional>true</optional>
         </dependency>
         <dependency>
@@ -86,22 +90,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>
